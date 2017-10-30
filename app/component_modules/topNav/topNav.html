@@ -1,0 +1,20 @@
+<nav class="nav {{navItem.class}}">
+    <div class="nav-group">
+        <span ng-if="leftItem='back'" class="nav-item js-back" ng-click="back()" href="javascript:;">
+            <span class="icon-arrow-left"></span>
+        </span>
+        <span ng-if="leftItem='menu'" class="nav-item" ng-click="menu(true)">
+            <span class="icon-menu"></span>
+        </span>
+    </div>
+
+    <div class="title-page">{{title}}
+        <span class="subtext-page"><!--{{subtext}}--></span>
+    </div>
+
+    <div class="nav-group right">
+        <span class="nav-item" ng-if="rightItem='share'" ng-click="share.open(true)"><span class="icon-share"></span></span>
+        <span class="nav-item" ng-if="rightItem='comment'" ng-click="getContact()"><span class="icon-comment"></span></span>
+        <span ui-sref="bill" class="nav-item" ng-if="rightItem='bill'"><span class="icon-graph-line"></span></span>
+    </div>
+</nav>
